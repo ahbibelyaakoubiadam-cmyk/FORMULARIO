@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulari d'inscripció</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            font-size: 13px;
+            color: #333333;
+            background-color: #f7f7f7;
+            margin: 20px;
+        }
+
+        form {
+            background-color: white;
+            width: 560px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: #e6edf6;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+
+        h2 span {
+            font-size: 12px;
+            color: gray;
+        }
+
+        fieldset {
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #dddddd;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        .mitad {
+            display: inline-block;
+            width: 48%;
+        }
+
+        .mitad input {
+            width: 90%;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        .opcio label {
+            display: inline;
+        }
+
+        .opcio {
+            margin: 5px;
+        }
+
+        input[type="color"] {
+            height: 40px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        input[type="file"] {
+            border-radius: 8px;
+        }
+
+        textarea {
+            height: 60px;
+            border-radius: 8px;
+        }
+
+        .enviar {
+            background-color: black;
+            color: white;
+            width: 85%;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+
+        .botons {
+            text-align: center;
+        }
+
+        .final {
+            text-align: center;
+            color: gray;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <form action="#" method="post">
+
+        <h2>
+            Formulari d'inscripció
+            <br>
+            <span>Activitats extraescolars · Curs 2026–2027</span>
+        </h2>
+
+
+        <fieldset>
+
+            <legend>1. Dades personals</legend>
+
+            <p class="mitad">
+                <label for="nom">Nom *</label>
+                <input type="text" id="nom" name="nom"
+                placeholder="Escriu el teu nom" required>
+            </p>
+
+            <p class="mitad">
+                <label for="cognoms">Cognoms *</label>
+                <input type="text" id="cognoms" name="cognoms"
+                placeholder="Escriu els cognoms" required>
+            </p>
+
+            <label for="correu">Correu electrònic *</label>
+            <input type="email" id="correu" name="correu"
+            placeholder="exemple@correu.com" required>
+
+            <p class="mitad">
+                <label for="telefon">Telèfon</label>
+                <input type="tel" id="telefon" name="telefon"
+                placeholder="600 000 000">
+            </p>
+
+            <p class="mitad">
+                <label for="data">Data de naixement *</label>
+                <input type="date" id="data" name="data" required>
+            </p>
+
+            <label for="contrasenya">Contrasenya *</label>
+            <input type="password" id="contrasenya"
+            name="contrasenya"
+            placeholder="Introdueix una contrasenya" required>
+
+        </fieldset>
+
+
+        <fieldset>
+
+            <legend>2. Informació acadèmica</legend>
+
+            <label for="curs">Curs actual *</label>
+
+            <select id="curs" name="curs" required>
+                <option value="">Selecciona un curs</option>
+                <option value="1eso">1r ESO</option>
+                <option value="2eso">2n ESO</option>
+                <option value="3eso">3r ESO</option>
+                <option value="4eso">4t ESO</option>
+                <option value="1batx">1r Batxillerat</option>
+                <option value="2batx">2n Batxillerat</option>
+            </select>
+
+            <label>Activitat que vols realitzar *</label>
+
+            <p class="opcio">
+                <input type="radio" id="programacio"
+                name="activitat" value="programacio" required>
+                <label for="programacio">Programació</label>
+            </p>
+
+            <p class="opcio">
+                <input type="radio" id="robotica"
+                name="activitat" value="robotica">
+                <label for="robotica">Robòtica</label>
+            </p>
+
+            <p class="opcio">
+                <input type="radio" id="disseny"
+                name="activitat" value="disseny">
+                <label for="disseny">Disseny web</label>
+            </p>
+
+            <p class="opcio">
+                <input type="radio" id="esports"
+                name="activitat" value="esports">
+                <label for="esports">Esports</label>
+            </p>
+
+            <label>Dies disponibles</label>
+
+            <p class="opcio">
+                <input type="checkbox" id="dilluns"
+                name="dies" value="dilluns">
+                <label for="dilluns">Dilluns</label>
+            </p>
+
+            <p class="opcio">
+                <input type="checkbox" id="dimarts"
+                name="dies" value="dimarts">
+                <label for="dimarts">Dimarts</label>
+            </p>
+
+            <p class="opcio">
+                <input type="checkbox" id="dimecres"
+                name="dies" value="dimecres">
+                <label for="dimecres">Dimecres</label>
+            </p>
+
+            <p class="opcio">
+                <input type="checkbox" id="dijous"
+                name="dies" value="dijous">
+                <label for="dijous">Dijous</label>
+            </p>
+
+            <p class="opcio">
+                <input type="checkbox" id="divendres"
+                name="dies" value="divendres">
+                <label for="divendres">Divendres</label>
+            </p>
+
+        </fieldset>
+
+
+        <fieldset>
+
+            <legend>3. Informació addicional</legend>
+
+            <label for="color">
+                Color preferit per a la teva identificació
+            </label>
+
+            <input type="color" id="color" name="color"
+            value="#4285db">
+
+            <label for="nivell">
+                Nivell d'experiència (de 0 a 10)
+            </label>
+
+            <input type="range" id="nivell" name="nivell"
+            min="0" max="10" value="5">
+
+            <p>0                                      5                                      10</p>
+
+            <label for="comentaris">
+                Comentaris o observacions
+            </label>
+
+            <textarea id="comentaris" name="comentaris"
+            placeholder="Escriu aquí els teus comentaris..."></textarea>
+
+            <label for="fitxer">
+                Adjunta un document (opcional)
+            </label>
+
+            <input type="file" id="fitxer" name="fitxer">
+
+            <p>Camp HTML de tipus file</p>
+
+        </fieldset>
+
+
+        <p class="opcio">
+            <input type="checkbox" id="condicions"
+            name="condicions" value="acceptat" required>
+
+            <label for="condicions">
+                Accepto la política de privacitat i les condicions
+                d'inscripció. *
+            </label>
+        </p>
+
+
+        <p class="botons">
+            <button type="submit" class="enviar">
+                Enviar inscripció
+            </button>
+
+        </p>
+
+        <p class="final">
+            * Camps obligatoris
+        </p>
+
+    </form>
+
+</body>
+</html>
